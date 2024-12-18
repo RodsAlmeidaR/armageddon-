@@ -26,3 +26,11 @@ jobs:
 
     - name: Rodar testes
       run: node test.js  # Aqui estamos executando o arquivo de teste diretamente
+
+    - name: Package project
+      run: zip -r calculadoraimc.zip .
+    - name: Upload artifact
+      uses: actions/upload-artifact@v3
+      with:
+        -name: calculadora-artifact
+        path: calculadoraimc.zip
