@@ -1,4 +1,4 @@
-import { calcularIMC } from "./index"; // Assumindo que a função calcularIMC esteja no arquivo index.js
+const { calcularIMC } = require("./index");
 
 function rodarTeste(altura, peso, resultadoEsperado) {
     const resultado = calcularIMC(altura, peso);
