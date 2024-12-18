@@ -24,8 +24,5 @@ jobs:
     - name: Instalar dependências
       run: npm install
 
-    - name: Verificar sintaxe do código
-      run: |
-        echo "Verificando código..."
-        node -e "console.log('Código está funcionando!')"
-        # Aqui você pode rodar outro script ou comando que verifique se o código está correto.
+    - name: Rodar testes
+      run: node test.js  # Aqui estamos executando o arquivo de teste diretamente
