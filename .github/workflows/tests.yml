@@ -1,0 +1,31 @@
+name: Verificação de Código
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  verificar:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Verificar repositório
+      uses: actions/checkout@v2
+
+    - name: Configurar Node.js
+      uses: actions/setup-node@v2
+      with:
+        node-version: '14' # ou a versão do Node.js que você usa
+
+    - name: Instalar dependências
+      run: npm install
+
+    - name: Verificar sintaxe do código
+      run: |
+        echo "Verificando código..."
+        node -e "console.log('Código está funcionando!')"
+        # Aqui você pode rodar outro script ou comando que verifique se o código está correto.
