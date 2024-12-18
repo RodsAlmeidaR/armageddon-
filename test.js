@@ -1,4 +1,3 @@
-// Importando a função calcularIMC do arquivo index.js
 const { calcularIMC } = require("./index"); 
 
 function rodarTeste(altura, peso, resultadoEsperado) {
@@ -10,7 +9,7 @@ function rodarTeste(altura, peso, resultadoEsperado) {
     }
 }
 
-// Rodando os testes
+
 rodarTeste(1.75, 70, "22.86");
 rodarTeste(1.60, 50, "19.53");
 rodarTeste(1.80, 90, "27.78");

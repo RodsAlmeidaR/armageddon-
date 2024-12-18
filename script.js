@@ -2,16 +2,16 @@ const form = document.getElementById("imcForm");
 const historicoBody = document.getElementById("historicoBody");
 const message = document.getElementById("message");
 
-// Dados simulados como banco de dados
+
 let historico = [];
 let id = 1;
 
-// Função para calcular IMC
+
 function calcularIMC(altura, peso) {
     return (peso / (altura * altura)).toFixed(2);
 }
 
-// Função para obter a classificação do IMC
+
 function classificarIMC(imc) {
     if (imc < 18.5) return "Abaixo do peso";
     if (imc < 24.9) return "Peso ideal";
@@ -21,7 +21,7 @@ function classificarIMC(imc) {
     return "Obesidade III";
 }
 
-// Renderizar histórico na tabela
+
 function renderHistorico() {
     historicoBody.innerHTML = "";
     historico.forEach((item, index) => {
